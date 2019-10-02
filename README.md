@@ -88,7 +88,7 @@ Set it up on your **server.js** file and add some config to restrict the access 
 In sequence, you'll need to add into your **App.js** a function to handle the request for the user registration and then store the current session into the user's browser local storage.
 
 ### Routing multiple pages
-It's recommended to install another dependency to help us in the routing process. Thus, run the following code in the terminal:
+It's recommended to install another dependency to help us in the routing process. You'll need to run the following code in the terminal:
 ```bash
 yarn add react-router-dom
 ```

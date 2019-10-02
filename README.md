@@ -21,7 +21,7 @@ Just run this simple code on your console:
 cinst yarn
 ```
 
-## Setting up Back-end
+## Setting up the Back-end
 It is recommended to create a separeted folder named **backend**, in which you'll install some dependencies running the following codes:
 ```bash
 yarn add express    #to run the backend
@@ -60,3 +60,39 @@ In order to test multiple request to the server and have a more controlled devel
 }
 ```
 To refence it, type **base_url** in your Insomnia url bar.
+
+## Setting up the Front-end
+First you'll need to setup your basic front-end environment by typing:
+```bash
+yarn create react-app frontend
+```
+After this react will deal with your basic front-end environment creation, and a new folder called **frontend** will be created. To start the app, go to your new folder and type:
+```bash
+yarn start
+```
+After that, multiple folder will be created. Go to **public** folder leave and **index.html** and delete everything else to clean up your environment. In sequence, go to **src** folder and clean up the every file with exception of **App.js**, **App.css** and **index.js**.
+
+You'll need to edit **App.js** to add your components and **App.css** to stylize them.
+
+In order to make AJAX calls, it's recommended to install axios (you can use **fecth** from native JS if you prefer):
+```bash
+yarn add axios
+```
+Now you'll create an **services** folder, and inside of it create the **api.js** file where some standard config for the api will be setup.
+
+To allow the access for your front-end application to your back-end, it's required to install a depency called **cors** on your back-end folder:
+```bash
+yarn add cors
+```
+Set it up on your **server.js** file and add some config to restrict the access if you want (in our case, we didn't really restricted anything - it was just to illustrate). Now you can make post requests to your back-end without getting CORS error.
+In sequence, you'll need to add into your **App.js** a function to handle the request for the user registration and then store the current session into the user's browser local storage.
+
+### Routing multiple pages
+It's recommended to install another dependency to help us in the routing process. Thus, run the following code in the terminal:
+```bash
+yarn add react-router-dom
+```
+Then, create a **routes.js** onto your **src** folder, where the routes handling will be defined.
+Create a **pages** folder onto your **src** with a folder for each page to be created, where a **index.js** file will be placed to set up the component.
+
+PS: Don't forget to turn on your back-end server in the background to use while you're developing the front-end.

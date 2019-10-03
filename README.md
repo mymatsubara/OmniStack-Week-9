@@ -92,7 +92,32 @@ It's recommended to install another dependency to help us in the routing process
 ```bash
 yarn add react-router-dom
 ```
-Then, create a **routes.js** onto your **src** folder, where the routes handling will be defined.
-Create a **pages** folder onto your **src** with a folder for each page to be created, where a **index.js** file will be placed to set up the component.
+Then, create a **routes.js** into your **src** folder, where the routes handling will be defined.
+Create a **pages** folder into your **src** with a folder for each page to be created, where a **index.js** file will be placed to set up the component.
 
 PS: Don't forget to turn on your back-end server in the background to use while you're developing the front-end.
+
+## Setting up the mobile
+You'll need to install expo-cli via terminal:
+```bash
+npm i -g expo-cli
+```
+Following this, you'll want to set up you mobile folder environmnent by typing:
+```bash
+expo init mobile  #"mobile" is the name of the folder in which the project will be developed 
+yarn start        #a window to handle your test environment will be opened
+```
+There 2 main options to emulate an android or ios:
+1. Xcode (ios)
+2. Genymotion for fun (android)
+3. NOX (android)
+4. BlueStacks (android)
+
+Now you're ready to test your app in realtime by changing the App.js content. In sequence, create a folder called **src** and another one inside of it called **pages**, which will store the components for each application page. In order to handle the routing between pages, you'll need to create a file **routes.js** into **src** and install react-navigation:
+```bash
+yarn add react-navigation
+expo install react-native-gesture-handler react-native-reanimated #after react-navigation is installed
+```
+For further reference on how to setup some types of navigation routing available check the [official documentation](https://reactnavigation.org/docs/en/getting-started.html).
+
+Then you'll setup each window with its own layout and ajax call using axios (or fetch, from JS).

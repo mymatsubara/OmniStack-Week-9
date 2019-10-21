@@ -40,7 +40,7 @@ Don't forget to create an account on MongoAtlas and to create a cluster to host 
 
 Installing moongose via yarn/npm:
 ```bash
-yarn add moongose
+yarn add mongoose
 ```
 Export mongoose to your main app (server.js) and connect to the created cluster using the code recently acquired in the MongoAtlas page. After that, create two new folders **models** and **controllers** to apply the [MVC pattern](https://pt.wikipedia.org/wiki/MVC) - note: we don't create a **view** folder because we're developing a backend app without any view modification.
 
